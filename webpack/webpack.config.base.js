@@ -13,6 +13,9 @@ module.exports = {
         {
           from: path.resolve(path.join(__dirname, '../.nojekyll')),
           to: path.join(__dirname, '../docs')
+        }, {
+          from: path.resolve(path.join(__dirname, '../src/assets/favicon.ico')),
+          to: path.join(__dirname, '../docs')
         },
       ],
     }),
