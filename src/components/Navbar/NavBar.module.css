@@ -26,3 +26,7 @@
 .navbar {
   background: #17181b;
 }
+
+.active {
+  color: red;
+}

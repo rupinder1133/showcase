@@ -5,5 +5,6 @@ module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
     contentBase: './docs',
+    historyApiFallback: true,
   },
 });
