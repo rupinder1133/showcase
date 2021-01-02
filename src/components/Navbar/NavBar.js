@@ -13,7 +13,7 @@ const NavBar = ({className}) => (<div className={classNames(className, styles.na
     <div className={styles.name}>Rupinder Singh</div>
   </div>
   <NavLink to="/" exact activeClassName={styles.active}>Home</NavLink>
-  <NavLink to="testing/" activeClassName={styles.active}>Testing</NavLink>
+  <NavLink to="/testing" activeClassName={styles.active}>Testing</NavLink>
 </div>);
 
 export default NavBar;
