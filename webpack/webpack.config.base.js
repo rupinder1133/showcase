@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const OUTPUT_DIR = path.join(__dirname, '../dist');
+
 module.exports = {
   entry: './src/index.js',
   plugins: [
@@ -10,12 +12,9 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {
-          from: path.resolve(path.join(__dirname, '../.nojekyll')),
-          to: path.join(__dirname, '../docs')
-        }, {
+       {
           from: path.resolve(path.join(__dirname, '../src/assets/favicon.ico')),
-          to: path.join(__dirname, '../docs')
+          to: OUTPUT_DIR
         },
       ],
     }),
@@ -23,8 +22,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: '[name].[chunkhash].bundle.js',
-    path: path.resolve(path.join(__dirname, '../docs')),
-    assetModuleFilename: 'assets/[hash][ext][query]',
+    path: path.resolve(OUTPUT_DIR),
   },
   module: {
     rules: [
