@@ -21,4 +21,18 @@ module.exports = {
     filename: '[name].[hash].bundle.js',
     path: path.resolve(path.join(__dirname, '../docs')),
   },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', "@babel/preset-react"]
+          }
+        }
+      }
+    ]
+  }
 };
