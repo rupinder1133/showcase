@@ -32,8 +32,13 @@ const Testing = () => {
     );
   }
 
+  const resetEyeball = () => {
+    eyeball.current.style.top = '50%';
+    eyeball.current.style.left = '50%';
+  }
+
   return (
-    <div className={styles.container} onMouseMove={onMouseMove} ref={playArea}>
+    <div className={styles.container} onMouseMove={onMouseMove} ref={playArea} onMouseLeave={resetEyeball}>
       <div className={styles.eye} ref={eye}>
         <div className={styles.eyeball} ref={eyeball}>
         </div>

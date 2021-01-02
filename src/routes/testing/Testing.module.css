@@ -26,4 +26,5 @@
     width: 10px;
     background-color: black;
     border-radius: 10px;
+    transition: top ease 400ms, left ease 400ms;
 }
