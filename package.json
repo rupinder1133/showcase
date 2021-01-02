@@ -1,0 +1,24 @@
+{
+  "name": "showcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "localserver.js",
+  "scripts": {
+    "start": "node localserver.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupinder1133/showcase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rupinder1133/showcase/issues"
+  },
+  "homepage": "https://github.com/rupinder1133/showcase#readme",
+  "dependencies": {
+    "chokidar": "^3.4.3",
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  }
+}
