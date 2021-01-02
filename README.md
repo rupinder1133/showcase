@@ -1,6 +1,6 @@
 ### Hello visitor ! 
 
-## [Click Here to visit](https://showcase-rs.herokuapp.com/)
+## <a href="https://showcase-rs.herokuapp.com/" target="_blank">Click Here to visit</a>
 
 #### Development
 ```
