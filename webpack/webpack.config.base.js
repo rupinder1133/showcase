@@ -18,6 +18,7 @@ module.exports = {
   output: {
     filename: '[name].[hash].bundle.js',
     path: path.resolve(path.join(__dirname, '../docs')),
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
   module: {
     rules: [
@@ -30,6 +31,10 @@ module.exports = {
             presets: ['@babel/preset-env', "@babel/preset-react"]
           }
         }
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset'
       }
     ]
   }

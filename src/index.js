@@ -1,6 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import NavBar from './components/Navbar/NavBar';
 
-const Component = () => (<div>Hello ji !</div>);
+const App = () => (<div>
+  <NavBar />
+</div>);
 
-ReactDOM.render(<Component />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
