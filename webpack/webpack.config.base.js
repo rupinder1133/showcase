@@ -25,7 +25,6 @@ module.exports = {
     filename: '[name].[chunkhash].bundle.js',
     path: path.resolve(path.join(__dirname, '../docs')),
     assetModuleFilename: 'assets/[hash][ext][query]',
-    publicPath: '/showcase/'
   },
   module: {
     rules: [
