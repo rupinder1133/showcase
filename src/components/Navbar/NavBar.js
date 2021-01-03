@@ -1,19 +1,35 @@
 import React from 'react';
-import profilePicture from '../../assets/profile-picture.jpg';
 import styles from './NavBar.module.css';
 import { classNames } from '../../utils';
 import {
   NavLink,
 } from 'react-router-dom';
+import ProfilePicture from '../ProfilePicture/ProfilePicture';
 
 
-const NavBar = ({className}) => (<div className={classNames(className, styles.navbar)}>
-  <div className={styles.profileSection}>
-    <img src={profilePicture} alt="profile-picture" className={styles.profilePicture}/>
-    <div className={styles.name}>Rupinder Singh</div>
-  </div>
-  <NavLink to="/" exact activeClassName={styles.active}>Home</NavLink>
-  <NavLink to="/testing" activeClassName={styles.active}>Testing</NavLink>
-</div>);
+const NavBar = ({className}) => {
+  const routes = [
+    {children: 'Home', to: '/', exact: true},
+    {children: 'Testing', to: '/testing'},
+    {children: 'Alpaca', to: '/a'},
+    {children: 'Orangutan', to: '/b'},
+    {children: 'Dodo', to: '/c'},
+    {children: 'Jurassic Park', to: '/d'},
+  ];
+
+  return (<div className={classNames(className, styles.navbar)}>
+    <ProfilePicture/>
+    {
+      routes.map((props) => (<div className={styles.navLinkContainer}>
+        <NavLink
+          key={props.to}
+          {...props}
+          className={styles.navLink}
+          activeClassName={styles.active}
+        />
+      </div>))
+    }
+  </div>);
+};
 
 export default NavBar;

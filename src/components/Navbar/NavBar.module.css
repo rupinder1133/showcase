@@ -1,32 +1,31 @@
-.profileSection {
-  position: relative;
-}
-
-.profilePicture {
-  width: 100%;
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-.profilePicture:hover {
-  filter: none;
-}
-
-.name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: rgba(141,153,174, 0.5);
-  backdrop-filter: blur(5px);
-}
-
 .navbar {
-  background: #17181b;
+    background-color: #17181b;
+}
+
+.navLinkContainer {
+    background-color: white;
+}
+
+.navLink {
+    color: #8d8974;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid white;
+    text-align: right;
+    position: relative;
+    background-color: #17181b;
+    transition: left ease 300ms;
+    left: 0;
+}
+
+.navLink:hover {
+    left: 10px;
 }
 
 .active {
-  color: red;
+    color: white;
+    font-weight: bold;
+    background-color: #766363;
+    position: static;
 }
