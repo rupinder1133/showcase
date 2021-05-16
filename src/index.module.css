@@ -10,6 +10,8 @@ body {
 .mainBody {
   display: flex;
   height: 100%;
+  background-color: #17181b;
+  color: white;
 }
 
 .navbar {

@@ -17,10 +17,10 @@ const NavBar = ({className}) => {
     {children: 'Jurassic Park', to: '/d'},
   ];
 
-  return (<div className={classNames(className, styles.navbar)}>
+  return (<div className={classNames(className)}>
     <ProfilePicture/>
     {
-      routes.map((props) => (<div className={styles.navLinkContainer}>
+      routes.map((props) => (<div>
         <NavLink
           key={props.to}
           {...props}
