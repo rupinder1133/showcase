@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './ProfilePicture.module.css';
 import eyeballs from '../../assets/eyeballs.png';
 import profilePicture from '../../assets/profile-picture.png';
+import { classNames } from '../../utils';
 
 const keepInRange = (lower, upper, testValue) => {
   const [absLower, absUpper, absTestValue] = [lower, upper, testValue].map(v => Math.abs(parseInt(v)));
@@ -11,7 +12,7 @@ const keepInRange = (lower, upper, testValue) => {
   return absTestValue;
 }
 
-const ProfilePicture = () => {
+const ProfilePicture = ({ className }) => {
   const eyeball = useRef(null);
   const eye = useRef(null);
   const playArea = useRef(null);
@@ -40,7 +41,7 @@ const ProfilePicture = () => {
   }
 
   return (
-    <div className={styles.container} onMouseMove={onMouseMove} ref={playArea} onMouseLeave={resetEyeball}>
+    <div className={classNames(styles.container, className)} onMouseMove={onMouseMove} ref={playArea} onMouseLeave={resetEyeball}>
       <img src={eyeballs} alt="eyeballs" className={styles.eyeball} ref={eyeball}/>
       <div className={styles.eye} ref={eye} />
       <img src={profilePicture} alt="profile-picture" className={styles.profilePicture}/>

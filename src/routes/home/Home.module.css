@@ -1,0 +1,24 @@
+.typewriterTextSize{
+  font-size: 3rem;
+}
+
+.typewriterText {
+  font-family: 'VT323', monospace;
+  color: #ffe0b2;
+  text-shadow: 0 0 3px #ffe0b2, 0 0 10px #ffb74d, 0 0 20px #fb8c00, 0 0 30px #f57c00;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    height: 50%;
+    padding: 15px;
+  }
+}

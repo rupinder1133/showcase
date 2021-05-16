@@ -21,3 +21,35 @@
     background-color: #766363;
     position: static;
 }
+
+.collapsedNavbar {
+    display: none;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .collapsedNavbar {
+        display: flex;
+        border-bottom: solid 1px #ffe0b2;
+    }
+    .navLink {
+        text-align: center;
+    }
+    .navLink:hover {
+        left: 0;
+    }
+    .profilePic {
+        display: none;
+    }
+    .links {
+        position: absolute;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+    .isOpen {
+        height: 90vh;
+    }
+}

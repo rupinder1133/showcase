@@ -17,3 +17,12 @@ body {
 .navbar {
   width: 205px;
 }
+
+@media screen and (max-width: 800px) {
+  .mainBody {
+    display: block;
+  }
+  .navbar {
+    width: 100%;
+  }
+}

@@ -41,7 +41,14 @@ module.exports = {
         type: 'asset'
       },
       {
-        test: /\.css$/i,
+        test: /^((?!\.module).)*css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.module.css$/i,
         use: [
           'style-loader',
           {
